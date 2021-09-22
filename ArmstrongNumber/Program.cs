@@ -14,7 +14,21 @@ namespace ArmstrongNumber
             //get input from user
             number = int.Parse(Console.ReadLine());
             //store the number in a temporary variable
+            temp = number;
+            //continue the program unit number greater than 0
+            while (number > 0)
+            {
+                remainder = number % 10;
+                sum = sum + (remainder * remainder * remainder);
+                number = number / 10;
 
+            }
+            //compare the orginal number
+            if (temp == sum)
+            {
+                Console.Write(temp + " Armstrong Number.");
+            }else
+                Console.Write(temp + " Not Armstrong Number.");
         }
     }
 }
